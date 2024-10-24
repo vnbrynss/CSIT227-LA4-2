@@ -1,40 +1,38 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package Management_Exc;
 
 public abstract class Person {
     private final String name;
     private int age;
 
-    /**
-     * TODO the implementation
-     * @param name the name of the person
-     * @param age the age of the person
-     * @throws IllegalArgumentException when age is negative
-     */
     public Person(String name, int age) {
         this.name = name;
-        if(age < 0) {
+        if (age < 0) {
             throw new IllegalArgumentException("Age must be non-negative.");
         } else {
             this.age = age;
         }
     }
 
-    @Override
     public String toString() {
-        return name + " (" + age + ")";
+        return this.name + " (" + this.age + ")";
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public int getAge() {
-        return age;
+        return this.age;
     }
 
     public void birthday() {
-        System.out.println("Happy birthday, " + name + "!");
-        age++;
+        System.out.println("Happy birthday, " + this.name + "!");
+        ++this.age;
     }
 
     public abstract void performTask();

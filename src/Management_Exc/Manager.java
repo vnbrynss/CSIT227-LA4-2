@@ -1,3 +1,8 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package Management_Exc;
 
 public class Manager extends Employee {
@@ -5,14 +10,8 @@ public class Manager extends Employee {
         super(name, age, salary);
     }
 
-    /**
-     * TODO this implementation
-     * @param e the employee to be given raise
-     * @param raise the raise
-     * @throws IllegalArgumentException when raise is negative
-     */
     public void giveRaise(Employee e, double raise) {
-        if (raise < 0) {
+        if (raise < 0.0) {
             throw new IllegalArgumentException("Raise must be non-negative");
         } else {
             double inc = e.getSalary();
@@ -20,13 +19,13 @@ public class Manager extends Employee {
                 this.setSalary(this.getSalary() + raise);
             } else {
                 e.setSalary(e.getSalary() + raise);
-                this.setSalary(this.getSalary() + raise/2);
+                this.setSalary(this.getSalary() + raise / 2.0);
             }
+
         }
     }
 
-    @Override
     public String toString() {
-        return "Mgr. " +super.toString();
+        return "Mgr. " + super.toString();
     }
 }
